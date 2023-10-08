@@ -84,4 +84,31 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   
 
+  const hamMenu = document.getElementById('drawer');
+  const navigation = document.querySelector('.navigations');
+  let flag = true;
+
+  hamMenu.addEventListener('click', toggleNavigation);
+  window.addEventListener('resize', handleResize);
+
+  function toggleNavigation() {
+      if (window.innerWidth <= 1010) {
+          if (flag) {
+              navigation.classList.remove('removal');
+              navigation.classList.add('reveal');
+          } else {
+              navigation.classList.remove('reveal');
+              navigation.classList.add('removal');
+          }
+          flag = !flag; // Toggle the flag
+      }
+  }
+
+  function handleResize() {
+      if (window.innerWidth > 1010) {
+          // Ensure the navigation is shown when the window is wider than 1010px
+          navigation.classList.remove('removal');
+          navigation.classList.remove('reveal');
+      }
+  }
   
