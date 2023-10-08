@@ -22,6 +22,7 @@
   background: #2a2a2a; 
 }
 }
+
 p{
   font-size: 24px;
 }
@@ -33,6 +34,7 @@ body{
   padding: 0;
   margin: 0;
   font-family: 'Inclusive Sans', sans-serif;
+  position: relative;
 }
 .lottie{
   /* position: absolute; */
@@ -164,10 +166,16 @@ nav{
   padding: 20px;
   border: 1px solid;
   border-radius: 10px;
+  color: #ffffff;
+  border: #000000;
+  background-color: rgba(0, 0, 0, 0.444);
   box-shadow: -20px 20px 0px black;
 }
-
-
+.abt-me a{
+  font-size:18px ;
+  text-decoration: underline;
+  color: #ffffff;
+}
 .page3{
   height: 100vh;
   background: #11998e;  /* fallback for old browsers */
@@ -377,6 +385,9 @@ textarea:focus{
       background: #2a2a2a; 
     }
   }
+  .header-up, nav{
+    /* overflow-x: hidden; */
+  }
   .ham-menu{
     display: block;
     font-size: 48px;
@@ -384,6 +395,7 @@ textarea:focus{
   }
   .header-up {
     padding: 10px;
+    /* overflow-x: hidden; */
     /* display: flex; */
     /* position: relative; */
     z-index: 99;
@@ -392,8 +404,7 @@ textarea:focus{
     padding: 10px;
     width: 80%;
     top: -70px;
-    right:-100%;
-    display: none;
+    display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     border-radius: 10px;
@@ -410,6 +421,9 @@ textarea:focus{
   .hello p{
     font-size: 40px;
   }
+  .hello .ui-3{
+    font-size: 35px;
+  }
   .anu-spell{
     font-size: 45px;
   }
@@ -417,7 +431,13 @@ textarea:focus{
     font-size: 70px;
   }
   .reveal{
-    right:-40px;
+    display: flex;
+    right:-30px;
+    transition: all 0.2s  ease-in-out;
+  }
+  .removal{
+    display: none;
+    right:-100%;
     transition: all 0.2s  ease-in-out;
   }
   .abt-me{
@@ -434,17 +454,12 @@ textarea:focus{
   .abt-me p{
     font-size:18px ;
   }
-  .abt-me a{
-    font-size:18px ;
-    text-decoration: underline;
-    color: #5c5c5c;
-  }
+  
   .abt-me-img img{
     width: 80%;
     border: 0px transparent;
   }
   .abt-me-para{
-    background-color: rgba(255, 255, 255, 0.298);
     max-width: 80%;
     padding: 20px;
     border: 1px solid;
